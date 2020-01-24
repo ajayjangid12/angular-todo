@@ -1,0 +1,29 @@
+<style>
+    table,th,td
+    {
+      border:1px solid black;
+    }
+    table{
+      width: 50%;
+    }
+    
+    div
+    {
+      text-align: center;
+    }
+    h2{
+        color: blue;
+    }
+    </style>
+    
+    
+    <div *ngIf="details.length>0">
+      <h2>TODOS</h2><br><br>
+      <div *ngFor="let todo of details;let i=index">
+          <h4>{{i+1}}. {{todo}}
+   <button class="btn btn-primary" (click)="del(i)">Del</button></h4>
+  </div>
+      
+    </div>
+    
+    
